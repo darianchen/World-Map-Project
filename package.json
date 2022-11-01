@@ -3,16 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  
-  
+  "browserslist": [
+    "defaults"
+  ],
   "scripts": {
+    "start": "webpack --watch --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch --mode=development",
     "build": "webpack --mode=production"
   },
-  "browserslist": [
-    "defaults"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/darianchen/World-Map-Project.git"
@@ -30,11 +29,13 @@
     "babel-loader": "^9.0.1",
     "core-js": "^3.26.0",
     "css-loader": "^6.7.1",
+    "d3": "^7.6.1",
     "mini-css-extract-plugin": "^2.6.1",
     "regenerator-runtime": "^0.13.10",
     "sass": "^1.55.0",
     "sass-loader": "^13.1.0",
+    "topojson-client": "^3.1.0",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
-  } 
+  }
 }
