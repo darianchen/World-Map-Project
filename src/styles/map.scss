@@ -1,0 +1,15 @@
+div.container{
+     display: flex;
+    // justify-content: center;
+     border: solid purple 1px;
+}
+
+svg{
+    border: solid black 1px;
+}
+
+.info{
+    flex-grow: 1;
+    border: solid green 5px;
+}
+

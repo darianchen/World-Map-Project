@@ -1,0 +1,36 @@
+* { 
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: teal;
+}
+
+nav{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.logo{
+    display: inline;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    font-family:cursive
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.creative{
+    position: relative;
+    top: -6px;
+    display: flex;
+    justify-content: center;
+}
