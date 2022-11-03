@@ -57,35 +57,65 @@ table {
 
 div.container {
   display: flex;
-  border: solid purple 1px;
-}
-
-svg {
-  border: solid black 1px;
+  margin: 105px 0 0 10px;
 }
 
 .info {
   flex-grow: 1;
-  border: solid green 5px;
 }
 
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  background-color: teal;
+path {
+  cursor: pointer;
+}
+
+path:nth-child(1) {
+  fill: #5D3FD3;
+}
+
+path:nth-child(2) {
+  fill: #AA336A;
+}
+
+path:nth-child(3) {
+  fill: #E97451;
+}
+
+path:nth-child(4) {
+  fill: #FFD700;
+}
+
+path:nth-child(5) {
+  fill: #D22B2B;
+}
+
+path:nth-child(6) {
+  fill: #228B22;
+}
+
+path:hover {
+  transform: scale(1.01);
+}
+
+#tooltip {
+  position: absolute;
+  font-size: 25px;
+  background-color: white;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
+  opacity: 0;
 }
 
 nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px;
-}
-
-.logo {
-  display: inline;
+  background-color: #00ab41;
+  box-shadow: 0 0 10px 0px #88c38b;
 }
 
 .title {
@@ -94,14 +124,56 @@ nav {
   font-family: cursive;
 }
 
-nav ul li {
-  list-style: none;
-  display: inline-block;
+.nav-links {
+  display: flex;
+  align-items: center;
 }
 
-.creative {
-  position: relative;
-  top: -6px;
+ul li {
+  padding: 0px 10px;
+}
+
+.aboutBtn {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.info {
+  flex-grow: 1;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: flex;
+}
+
+.info-innerbox {
+  height: 80%;
+  width: 100%;
+}
+
+.name {
+  text-align: center;
+  font-size: 35px;
+}
+
+.stat {
+  font-size: 20px;
+}
+
+.continent {
+  display: none;
+}
+
+.footer {
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #44A7C4;
 }
