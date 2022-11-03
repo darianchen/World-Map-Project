@@ -1,15 +1,58 @@
 div.container{
      display: flex;
+     margin: 105px 0 0 10px;
     // justify-content: center;
-     border: solid purple 1px;
 }
 
-svg{
-    border: solid black 1px;
-}
+// svg{
+//     border: solid black 1px;
+// }
 
 .info{
     flex-grow: 1;
-    border: solid green 5px;
+
 }
 
+path {
+    cursor: pointer;
+}
+
+path:nth-child(1){
+    fill: #5D3FD3;
+}
+
+path:nth-child(2){
+    fill: #AA336A;
+}
+
+path:nth-child(3){
+    fill:#E97451;
+}
+
+path:nth-child(4){
+    fill: #FFD700;
+}
+
+path:nth-child(5){
+    fill: #D22B2B;	
+}
+
+path:nth-child(6){
+    fill: #228B22;
+}
+
+path:hover{
+    transform: scale(1.01);
+}
+
+
+
+#tooltip {
+    position: absolute;
+    font-size: 25px;
+    background-color: white;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    opacity: 0;
+}

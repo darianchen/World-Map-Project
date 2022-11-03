@@ -1,0 +1,56 @@
+.info{
+    flex-grow: 1;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    //align-items: center;
+
+}
+
+.info-innerbox{
+    height: 80%;
+    width: 100%;
+
+}
+
+.name{
+    text-align: center;
+    font-size: 35px;
+    //margin-bottom: 5px;
+}
+
+.stat{
+    font-size: 20px;
+    //margin-bottom: 30px;
+}
+
+.continent{
+    display: none;
+}
+
+// .asia{
+//     display: none;
+// }
+
+// .oceania{
+//     display: none;
+// }
+
+// .europe{
+//     display: none;
+// }
+
+// .africa{
+//     display: none;
+// }
+
+// .north-america{
+//     display: none;
+// }
+
+// .south-america{
+//     display: none;
+// }
+
+// path:nth-child(1):hover .europe {
+//     display: block;
+// }
