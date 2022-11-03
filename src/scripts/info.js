@@ -1,77 +1,72 @@
 const info = () => {
 
-    const europe = document.getElementById("europe");
+    
     const world = document.getElementsByClassName("world")[0];
+    const europe = document.getElementById("europe");
+    const asia = document.getElementById("asia");
+    const africa = document.getElementById("africa");
+    const northAmerica = document.getElementById("north-america");
+    const southAmerica = document.getElementById("south-america");
+    const oceania = document.getElementById("oceania");
 
     europe.addEventListener("mouseover", () => {
-        document.getElementById("europe-info").style.display = "block";
+        document.querySelector(".europe").style.display = "flex";
         world.style.display = "none";
     });
 
     europe.addEventListener("mouseout", () => {
-        document.getElementById("europe-info").style.display = "none";
-        world.style.display = "block";
+        document.querySelector(".europe").style.display = "none";
+        world.style.display = "flex";
     });
 
-    const asia = document.getElementById("asia");
-
     asia.addEventListener("mouseover", () => {
-        document.getElementById("asia-info").style.display = "block";
+        document.querySelector(".asia").style.display = "flex";
         world.style.display = "none";
     });
 
     asia.addEventListener("mouseout", () => {
-        document.getElementById("asia-info").style.display = "none";
-        world.style.display = "block";
+        document.querySelector(".asia").style.display = "none";
+        world.style.display = "flex";
     });
-    
-
-    const africa = document.getElementById("africa");
 
     africa.addEventListener("mouseover", () => {
-        document.getElementById("africa-info").style.display = "block";
+        document.querySelector(".africa").style.display = "flex";
         world.style.display = "none";
     });
 
     africa.addEventListener("mouseout", () => {
-        document.getElementById("africa-info").style.display = "none";
-        world.style.display = "block";
+        document.querySelector(".africa").style.display = "none";
+        world.style.display = "flex";
     });
 
-    const northAmerica = document.getElementById("north-america");
-
     northAmerica.addEventListener("mouseover", () => {
-        document.getElementById("north-america-info").style.display = "block";
+        document.querySelector(".north-america").style.display = "flex";
         world.style.display = "none";
     });
 
     northAmerica.addEventListener("mouseout", () => {
-        document.getElementById("north-america-info").style.display = "none";
-        world.style.display = "block";
+        document.querySelector(".north-america").style.display = "none";
+        world.style.display = "flex";
     });
 
-    const southAmerica = document.getElementById("south-america");
-
     southAmerica.addEventListener("mouseover", () => {
-        document.getElementById("south-america-info").style.display = "block";
+        document.querySelector(".south-america").style.display = "flex";
         world.style.display = "none";
     });
 
     southAmerica.addEventListener("mouseout", () => {
-        document.getElementById("south-america-info").style.display = "none";
-        world.style.display = "block";
+        document.querySelector(".south-america").style.display = "none";
+        world.style.display = "flex";
     });
 
-    const oceania = document.getElementById("oceania");
-
     oceania.addEventListener("mouseover", () => {
-        document.getElementById("oceania-info").style.display = "block";
+        document.querySelector(".oceania").style.display = "flex";
         world.style.display = "none";
     });
 
     oceania.addEventListener("mouseout", () => {
-        document.getElementById("oceania-info").style.display = "none";
-        world.style.display = "block";
+        document.querySelector(".oceania").style.display = "none";
+        world.style.display = "flex";
     });
 }
 
