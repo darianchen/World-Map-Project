@@ -1,5 +1,4 @@
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,24 +6,113 @@
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <title>World Map</title>
-  </head>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
 
+  </head>
   <body>
     <header>
         <nav class = nav_bar>
           <div class = "logo">
-            <img class="earth" src="./src/images/earth.gif" alt="earth">
+            <img class="earth" src="images/globe.gif" alt="globe">
           </div>
             <div class = "title">I'm the Map!</div>
-          <ul class = "nav_links">
-            <li><div class="aboutBtn">About</div></li>
-            <li><a href=""><img src="./src/images/github_logo.png" alt="github logo"></a></li>
-            <li><a href=""><img src="./src/images/linkedin_logo.png" alt="linkedin logo"></a></li>
+          <ul class = "nav-links">
+            <li><button type="button" class="aboutBtn btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">About</button></li>
+            <li><a href="https://github.com/darianchen"><img src="images/github.svg" alt="github logo"></a></li>
+            <li><a href="https://www.linkedin.com/in/darianchen/"><img src="images/linkedin.svg" alt="linkedin logo"></a></li>
+            <li><a href="https://angel.co/u/darian-chen"><img src="images/angellist.svg" alt="angellist logo"></a></li>
           </ul>
         </nav>
     </header>
 
-    <div class="container"><div class="info">info</div></div>
+    <div class="container">
+        <div class="info world">
+            <div class="info-innerbox">
+                <div class="name">THE WORLD</div>
+                <div class="stat">Population</div>
+                <div class="stat">Largest Country by Population</div>
+                <div class="stat">Smallest Country by Population</div>
+                <div class="stat">Number of Countries</div>
+                <div class="stat">Landmass</div>
+                <div class="stat">Largest Country by Landmass</div>
+                <div class="stat">Smallest Country by Landmass</div>
+                <div class="stat">GDP</div>
+            </div>
+        </div>
+        <div class="info continent asia" id="asia-info">
+            <div class="info-innerbox">
+                <div class="name">Asia</div>
+                <div class="stat">Population</div>
+                <div class="stat">Largest Country by Population</div>
+                <div class="stat">Smallest Country by Population</div>
+                <div class="stat">Number of Countries</div>
+                <div class="stat">Landmass</div>
+                <div class="stat">Largest Country by Landmass</div>
+                <div class="stat">Smallest Country by Landmass</div>
+            </div>
+        </div>
+        <div class="info continent europe" id="europe-info">
+            <div class="info-innerbox">
+                <div class="name">Europe</div>
+                <div class="stat">Population</div>
+                <div class="stat">Largest Country by Population</div>
+                <div class="stat">Smallest Country by Population</div>
+                <div class="stat">Number of Countries</div>
+                <div class="stat">Landmass</div>
+                <div class="stat">Largest Country by Landmass</div>
+                <div class="stat">Smallest Country by Landmass</div>
+            </div>
+        </div>
+        <div class="info continent north-america" id="north-america-info">
+            <div class="info-innerbox">
+                <div class="name">North America</div>
+                <div class="stat">Population</div>
+                <div class="stat">Largest Country by Population</div>
+                <div class="stat">Smallest Country by Population</div>
+                <div class="stat">Number of Countries</div>
+                <div class="stat">Landmass</div>
+                <div class="stat">Largest Country by Landmass</div>
+                <div class="stat">Smallest Country by Landmass</div>
+            </div>
+        </div>
+        <div class="info continent oceania" id="oceania-info">
+            <div class="info-innerbox">
+                <div class="name">Oceania</div>
+                <div class="stat">Population</div>
+                <div class="stat">Largest Country by Population</div>
+                <div class="stat">Smallest Country by Population</div>
+                <div class="stat">Number of Countries</div>
+                <div class="stat">Landmass</div>
+                <div class="stat">Largest Country by Landmass</div>
+                <div class="stat">Smallest Country by Landmass</div>
+            </div>
+        </div>
+        <div class="info continent south-america" id="south-america-info">
+            <div class="info-innerbox">
+                <div class="name">South America</div>
+                <div class="stat">Population</div>
+                <div class="stat">Largest Country by Population</div>
+                <div class="stat">Smallest Country by Population</div>
+                <div class="stat">Number of Countries</div>
+                <div class="stat">Landmass</div>
+                <div class="stat">Largest Country by Landmass</div>
+                <div class="stat">Smallest Country by Landmass</div>
+            </div>
+        </div>
+        <div class="info continent africa" id="africa-info">
+            <div class="info-innerbox">
+                <div class="name">Africa</div>
+                <div class="stat">Population</div>
+                <div class="stat">Largest Country by Population</div>
+                <div class="stat">Smallest Country by Population</div>
+                <div class="stat">Number of Countries</div>
+                <div class="stat">Landmass</div>
+                <div class="stat">Largest Country by Landmass</div>
+                <div class="stat">Smallest Country by Landmass</div>
+            </div>
+        </div>
+    </div>
+    <div id="tooltip"></div>
+    <div class="footer">© 2022 Darian Chen</div>
   </body>
-
 </html>
