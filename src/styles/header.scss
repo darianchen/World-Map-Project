@@ -6,7 +6,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #00ab41;
+    background-color: #33b864;
     box-shadow: 0 0 10px 0px #88c38b;
 }
 
@@ -49,10 +49,20 @@ ul li {
     font-size: 15px;
     cursor: pointer;
     text-decoration: none;
-    // background-color: white;
-    // color: black;
-    // padding: 2px 6px 2px 6px;
-    // border-radius: 10px;
-    // border-bottom: 1px solid #333333;
-    // border-left: 1px solid #CCCCCC;
+    transition: all 0.25s;
+    transform-origin: 50% 50%;
+}
+
+.aboutBtn:hover{
+    transform: scale(1.2);
+}
+
+.link:hover{
+    transform: scale(1.2);
+}
+
+.link{
+    transition: all 0.25s;
+    transform-origin: 50% 50%;
+    user-select: none;
 }

@@ -1,16 +1,8 @@
 div.container{
-     display: flex;
-     margin: 105px 0 0 10px;
-    // justify-content: center;
-}
-
-// svg{
-//     border: solid black 1px;
-// }
-
-.info{
-    flex-grow: 1;
-
+    display: flex;
+    margin-top: 105px;
+    stroke: #646464;
+    stroke-width: 1px;
 }
 
 path {
@@ -45,14 +37,13 @@ path:hover{
     transform: scale(1.01);
 }
 
-
-
 #tooltip {
     position: absolute;
-    font-size: 25px;
+    font-size: 18px;
     background-color: white;
     padding: 5px;
     border: 2px solid black;
     border-radius: 10px;
     opacity: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }

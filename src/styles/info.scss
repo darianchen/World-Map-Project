@@ -1,29 +1,33 @@
 .info{
-    flex-grow: 1;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     display: flex;
-    //align-items: center;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.info-innerbox{
-    height: 80%;
-    width: 100%;
-
+.innerbox{
+    width: 400px;
+    height: 400px;
+    background-color: #F5F5DC;
+    border-radius: 5px;
+    text-align: center;
+    border: solid blue 5px;
 }
+
 
 .name{
     text-align: center;
     font-size: 35px;
-    //margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .stat{
     font-size: 20px;
-    //margin-bottom: 30px;
 }
 
-.continent{
+.continent-box{
     display: none;
 }
 
