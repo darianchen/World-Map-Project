@@ -16,7 +16,7 @@ const map = () => {
     d3.json("data/world-continents.topo.json")
         .then(data => {
             const continents = topojson.feature(data, data.objects.default);
-            g.selectAll(path).data(continents.features).enter().append('path').attr('d', path);
+            g.selectAll(path).data(continents.features).enter().append('path').attr('d', path).attr('class', "continent");
         })
         .then(() => {
             document.getElementsByTagName("path")[0].setAttribute("id", "europe");
@@ -31,6 +31,18 @@ const map = () => {
         ).then(
             hoverTooltip
         )
+
+        const continents = document.getElementsByClassName("continents")[0];
+
+
+        continents.addEventListener("click", e => {
+            const name = e.target.__data__.properties.name;
+            const svg = document.getElementsByTagName("svg")[0];
+            const container = document.querySelector(".container");
+            svg.style.display = "none";
+            container.style.display = "none";      
+        });
+        
 }
 
 export default map;
