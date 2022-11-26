@@ -1,6 +1,6 @@
-
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
+import continent from "./continent";
 import hoverTooltip from "./hover-tooltip";
 import info from "./info";
 
@@ -37,11 +37,47 @@ const map = () => {
 
         continents.addEventListener("click", e => {
             const name = e.target.__data__.properties.name;
-            const svg = document.getElementsByTagName("svg")[0];
+            const keys = {
+                "Asia": "asia",
+                "North America": "north-america",
+                "South America": "south-america",
+                "Europe": "europe",
+                "Africa": "africa",
+                "Oceania": "oceania"
+            }
             const container = document.querySelector(".container");
-            svg.style.display = "none";
-            container.style.display = "none";      
+            const continent = document.querySelector(`.${keys[name]}-container`);
+            container.style.display = "none";
+            continent.style.display = "flex";      
         });
+
+        const modal = document.getElementById("about-modal");
+        const countryModal = document.getElementById("country-modal");
+        const aboutBtn = document.getElementById("aboutBtn");
+        const closeBtns = document.getElementsByClassName("closeBtn");
+        console.log(closeBtns);
+
+
+        aboutBtn.addEventListener("click", () => {
+            modal.style.display = "block";
+        });
+
+        for(let i = 0; i < closeBtns.length; i++){
+            closeBtns[i].addEventListener("click", () => {
+                countryModal.style.display = "none";
+            })
+        };
+
+        window.addEventListener("click", (e) => {
+            if(e.target === modal) modal.style.display = "none"
+        })
+
+        window.addEventListener("click", (e) => {
+            if(e.target === countryModal) countryModal.style.display = "none"
+        })
+
+
+
         
 }
 
