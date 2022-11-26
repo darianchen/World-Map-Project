@@ -57,38 +57,37 @@ table {
 
 div.container {
   display: flex;
-  margin: 105px 0 0 10px;
-}
-
-.info {
-  flex-grow: 1;
+  margin-top: 110px;
+  stroke: #646464;
+  stroke-width: 1px;
+  padding-left: 10px;
 }
 
 path {
   cursor: pointer;
 }
 
-path:nth-child(1) {
+#europe {
   fill: #5D3FD3;
 }
 
-path:nth-child(2) {
+#oceania {
   fill: #AA336A;
 }
 
-path:nth-child(3) {
+#africa {
   fill: #E97451;
 }
 
-path:nth-child(4) {
+#asia {
   fill: #FFD700;
 }
 
-path:nth-child(5) {
+#north-america {
   fill: #D22B2B;
 }
 
-path:nth-child(6) {
+#south-america {
   fill: #228B22;
 }
 
@@ -98,12 +97,13 @@ path:hover {
 
 #tooltip {
   position: absolute;
-  font-size: 25px;
+  font-size: 18px;
   background-color: white;
   padding: 5px;
   border: 2px solid black;
   border-radius: 10px;
   opacity: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 nav {
@@ -114,7 +114,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #00ab41;
+  background-color: #33b864;
   box-shadow: 0 0 10px 0px #88c38b;
 }
 
@@ -133,34 +133,58 @@ ul li {
   padding: 0px 10px;
 }
 
-.aboutBtn {
+#aboutBtn {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   cursor: pointer;
   text-decoration: none;
+  transition: all 0.25s;
+  transform-origin: 50% 50%;
+}
+
+#aboutBtn:hover {
+  transform: scale(1.2);
+}
+
+.link:hover {
+  transform: scale(1.2);
+}
+
+.link {
+  transition: all 0.25s;
+  transform-origin: 50% 50%;
+  user-select: none;
 }
 
 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex-grow: 1;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  display: flex;
 }
 
-.info-innerbox {
-  height: 80%;
-  width: 100%;
+.innerbox {
+  width: 400px;
+  height: 400px;
+  background-color: #F5F5DC;
+  border-radius: 5px;
+  text-align: center;
+  border: solid blue 5px;
 }
 
 .name {
   text-align: center;
   font-size: 35px;
+  margin-bottom: 5px;
 }
 
 .stat {
   font-size: 20px;
 }
 
-.continent {
+.continent-box {
   display: none;
 }
 
@@ -172,6 +196,185 @@ ul li {
   width: 100%;
   height: 2.5rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.countries-svg {
+  stroke: #646464;
+  stroke-width: 1px;
+}
+
+.asia-container {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.asia-map {
+  display: flex;
+  justify-content: center;
+}
+
+.africa-container {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.africa-map {
+  display: flex;
+  justify-content: center;
+}
+
+.europe-container {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.europe-map {
+  display: flex;
+  justify-content: center;
+}
+
+.oceania-container {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.oceania-map {
+  display: flex;
+  justify-content: center;
+}
+
+.north-america-container {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.north-america-map {
+  display: flex;
+  justify-content: center;
+}
+
+.south-america-container {
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.south-america-map {
+  display: flex;
+  justify-content: center;
+}
+
+.backBtn-box {
+  height: 40px;
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 5;
+  left: 5;
+  margin-top: 100px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fa {
+  color: #383838;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  padding: 3px 18px;
+}
+
+.fa-mail-reply {
+  font-size: 10px;
+  background: linear-gradient(#07ffb0, #4caf50);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.continent-title {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  align-items: center;
+  font-size: 35px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal-content {
+  background-color: #f4f4f4;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 20% auto;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 0.4s;
+}
+
+.closeBtn {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about-header {
+  font-size: 20px;
+  padding: 5px;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#country-name {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.flag-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#flag {
+  width: 45%;
+  min-width: 7.5em;
+}
+
+#country-name {
+  display: flex;
+  justify-content: center;
 }
 
 body {
