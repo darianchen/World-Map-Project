@@ -1,35 +1,36 @@
 div.container{
     display: flex;
-    margin-top: 105px;
+    margin-top: 110px;
     stroke: #646464;
     stroke-width: 1px;
+    padding-left: 10px;
 }
 
 path {
     cursor: pointer;
 }
 
-path:nth-child(1){
+#europe{
     fill: #5D3FD3;
 }
 
-path:nth-child(2){
+#oceania{
     fill: #AA336A;
 }
 
-path:nth-child(3){
+#africa{
     fill:#E97451;
 }
 
-path:nth-child(4){
+#asia{
     fill: #FFD700;
 }
 
-path:nth-child(5){
+#north-america{
     fill: #D22B2B;	
 }
 
-path:nth-child(6){
+#south-america{
     fill: #228B22;
 }
 

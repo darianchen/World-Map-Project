@@ -44,7 +44,7 @@ ul li {
     padding: 0px 10px;
 }
 
-.aboutBtn{
+#aboutBtn{
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 15px;
     cursor: pointer;
@@ -53,7 +53,7 @@ ul li {
     transform-origin: 50% 50%;
 }
 
-.aboutBtn:hover{
+#aboutBtn:hover{
     transform: scale(1.2);
 }
 

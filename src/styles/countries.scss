@@ -1,0 +1,116 @@
+.countries-svg{
+    stroke: #646464;
+    stroke-width: 1px;
+}
+
+.asia-container{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.asia-map{
+    display: flex;
+    justify-content: center;
+}
+
+.africa-container{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.africa-map{
+    display: flex;
+    justify-content: center;
+}
+
+.europe-container{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.europe-map{
+    display: flex;
+    justify-content: center;  
+}
+
+.oceania-container{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.oceania-map{
+    display: flex;
+    justify-content: center;  
+}
+
+
+.north-america-container{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.north-america-map{
+    display: flex;
+    justify-content: center;
+}
+
+// .countries-svg{
+//     border: solid blue 5px;
+// }
+
+.south-america-container{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+.south-america-map{
+    display: flex;
+    justify-content: center;
+}
+
+.backBtn-box{
+    height: 40px;
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position:absolute;
+    top:5;
+    left:5;
+    margin-top: 100px;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.fa{
+    color: #383838;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    padding: 3px 18px;
+}
+
+.fa-mail-reply{
+    font-size: 10px;
+    background: linear-gradient(#07ffb0, #4caf50);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+.continent-title{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+    font-size: 35px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
