@@ -4,7 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <script src="./dist/main.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
     <title>World Map</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.png">
 
@@ -17,18 +19,35 @@
           </div>
             <div class = "title">I'm the Map!</div>
           <ul class = "nav-links">
-            <li><button type="button" class="aboutBtn btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">About</button></li>
-            <li><a href="https://github.com/darianchen"><img src="images/github.svg" alt="github logo"></a></li>
-            <li><a href="https://www.linkedin.com/in/darianchen/"><img src="images/linkedin.svg" alt="linkedin logo"></a></li>
-            <li><a href="https://angel.co/u/darian-chen"><img src="images/angellist.svg" alt="angellist logo"></a></li>
+            <li><div id="aboutBtn">About</div></li>
+            <li><a href="https://github.com/darianchen" target="_blank"><img src="images/github.svg" class="link" alt="github logo"></a></li>
+            <li><a href="https://www.linkedin.com/in/darianchen/" target="_blank"><img src="images/linkedin.svg" class="link" alt="linkedin logo"></a></li>
+            <li><a href="https://angel.co/u/darian-chen" target="_blank"><img src="images/angellist.svg" class="link" alt="angellist logo"></a></li>
           </ul>
         </nav>
     </header>
 
     <div class="container">
         <div class="info world">
-            <div class="info-innerbox">
-                <div class="name">THE WORLD</div>
+            <div class="innerbox">
+                <div class="name">Earth</div>
+                <div class="stat">Population</div>
+                <div class="stat">Largest Country by Population</div>
+                <div class="stat">Smallest Country by Population</div>
+                <div class="stat">Number of Countries</div>
+                <div class="stat">Landmass</div>
+                <di>196.9 million mi²</di>
+                <div class="stat">Largest Country by Landmass</div>
+                <div>Russia</div>
+                <div class="stat">Smallest Country by Landmass</div>
+                <div>Vatican City</div>
+                <div class="stat">GDP</div>
+            </div>
+        </div>
+
+        <div class="info continent-box europe">
+            <div class="innerbox">
+                <div class="name">Europe</div>
                 <div class="stat">Population</div>
                 <div class="stat">Largest Country by Population</div>
                 <div class="stat">Smallest Country by Population</div>
@@ -39,8 +58,23 @@
                 <div class="stat">GDP</div>
             </div>
         </div>
-        <div class="info continent asia" id="asia-info">
-            <div class="info-innerbox">
+
+        <div class="info continent-box africa">
+            <div class="innerbox">
+                <div class="name">Africa 🌍</div>
+                <div class="stat">Population</div>
+                <div class="stat">Largest Country by Population</div>
+                <div class="stat">Smallest Country by Population</div>
+                <div class="stat">Number of Countries</div>
+                <div class="stat">Landmass</div>
+                <div class="stat">Largest Country by Landmass</div>
+                <div class="stat">Smallest Country by Landmass</div>
+                <div class="stat">GDP</div>
+            </div>
+        </div>
+
+        <div class="info continent-box asia">
+            <div class="innerbox">
                 <div class="name">Asia</div>
                 <div class="stat">Population</div>
                 <div class="stat">Largest Country by Population</div>
@@ -49,22 +83,12 @@
                 <div class="stat">Landmass</div>
                 <div class="stat">Largest Country by Landmass</div>
                 <div class="stat">Smallest Country by Landmass</div>
+                <div class="stat">GDP</div>
             </div>
         </div>
-        <div class="info continent europe" id="europe-info">
-            <div class="info-innerbox">
-                <div class="name">Europe</div>
-                <div class="stat">Population</div>
-                <div class="stat">Largest Country by Population</div>
-                <div class="stat">Smallest Country by Population</div>
-                <div class="stat">Number of Countries</div>
-                <div class="stat">Landmass</div>
-                <div class="stat">Largest Country by Landmass</div>
-                <div class="stat">Smallest Country by Landmass</div>
-            </div>
-        </div>
-        <div class="info continent north-america" id="north-america-info">
-            <div class="info-innerbox">
+
+        <div class="info continent-box north-america">
+            <div class="innerbox">
                 <div class="name">North America</div>
                 <div class="stat">Population</div>
                 <div class="stat">Largest Country by Population</div>
@@ -73,22 +97,12 @@
                 <div class="stat">Landmass</div>
                 <div class="stat">Largest Country by Landmass</div>
                 <div class="stat">Smallest Country by Landmass</div>
+                <div class="stat">GDP</div>
             </div>
         </div>
-        <div class="info continent oceania" id="oceania-info">
-            <div class="info-innerbox">
-                <div class="name">Oceania</div>
-                <div class="stat">Population</div>
-                <div class="stat">Largest Country by Population</div>
-                <div class="stat">Smallest Country by Population</div>
-                <div class="stat">Number of Countries</div>
-                <div class="stat">Landmass</div>
-                <div class="stat">Largest Country by Landmass</div>
-                <div class="stat">Smallest Country by Landmass</div>
-            </div>
-        </div>
-        <div class="info continent south-america" id="south-america-info">
-            <div class="info-innerbox">
+
+        <div class="info continent-box south-america">
+            <div class="innerbox">
                 <div class="name">South America</div>
                 <div class="stat">Population</div>
                 <div class="stat">Largest Country by Population</div>
@@ -97,11 +111,13 @@
                 <div class="stat">Landmass</div>
                 <div class="stat">Largest Country by Landmass</div>
                 <div class="stat">Smallest Country by Landmass</div>
+                <div class="stat">GDP</div>
             </div>
         </div>
-        <div class="info continent africa" id="africa-info">
-            <div class="info-innerbox">
-                <div class="name">Africa</div>
+
+        <div class="info continent-box oceania">
+            <div class="innerbox">
+                <div class="name">Oceania</div>
                 <div class="stat">Population</div>
                 <div class="stat">Largest Country by Population</div>
                 <div class="stat">Smallest Country by Population</div>
@@ -109,10 +125,48 @@
                 <div class="stat">Landmass</div>
                 <div class="stat">Largest Country by Landmass</div>
                 <div class="stat">Smallest Country by Landmass</div>
+                <div class="stat">GDP</div>
             </div>
         </div>
     </div>
+
+    <div class="asia-container"><div class="continent-title"><div class="backBtn-box"><i class="fa fa-mail-reply" aria-hidden="true"></i></div>Asia</div><div class="asia-map"></div></div>
+    <div class="europe-container"><div class="continent-title"><div class="backBtn-box"><i class="fa fa-mail-reply" aria-hidden="true"></i></div>Europe</div><div class="europe-map"></div></div>
+    <div class="africa-container"><div class="continent-title"><div class="backBtn-box"><i class="fa fa-mail-reply" aria-hidden="true"></i></div>Africa</div><div class="africa-map"></div></div>
+    <div class="north-america-container"><div class="continent-title"><div class="backBtn-box"><i class="fa fa-mail-reply" aria-hidden="true"></i></div>North America</div><div class="north-america-map"></div></div>
+    <div class="south-america-container"><div class="continent-title"><div class="backBtn-box"><i class="fa fa-mail-reply" aria-hidden="true"></i></div>South America</div><div class="south-america-map"></div></div>
+    <div class="oceania-container"><div class="continent-title"><div class="backBtn-box"><i class="fa fa-mail-reply" aria-hidden="true"></i></div>Oceania</div><div class="oceania-map"></div></div>
+
     <div id="tooltip"></div>
+    <div id="about-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBtn">&times;</span>
+                <div class="about-header">I'm the Map is a data visualization application of the different continents and countries of the world</div>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit a autem quae itaque fuga corrupti explicabo sit, unde cumque dolorem ipsam sint ipsum! Eligendi atque sint saepe, unde dolorum tempora! <body>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div id="country-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="closeBtn">&times;</span>
+                <div class="flag-box"><img id="flag" src="" alt="Country Flag"></div>
+                <div id="country-name"></div>
+            </div>
+            <div class="country-modal-body">
+                <div id="capital"></div>
+                <div id="continents"></div>
+                <div id="population"></div>
+                <div id="languages"></div>
+                <div id="currencies"></div>
+                <div id="area"></div>
+            </div>
+        </div>
+    </div>
     <div class="footer">© 2022 Darian Chen</div>
   </body>
 </html>
