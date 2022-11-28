@@ -26,9 +26,7 @@ const map = () => {
             document.getElementsByTagName("path")[4].setAttribute("id", "north-america");
             document.getElementsByTagName("path")[5].setAttribute("id", "south-america");
         })
-        .then( 
-            info
-        ).then(
+        .then(
             hoverTooltip
         )
 
@@ -55,8 +53,6 @@ const map = () => {
         const countryModal = document.getElementById("country-modal");
         const aboutBtn = document.getElementById("aboutBtn");
         const closeBtns = document.getElementsByClassName("closeBtn");
-        console.log(closeBtns);
-
 
         aboutBtn.addEventListener("click", () => {
             modal.style.display = "block";
@@ -64,6 +60,7 @@ const map = () => {
 
         for(let i = 0; i < closeBtns.length; i++){
             closeBtns[i].addEventListener("click", () => {
+                modal.style.display = "none";
                 countryModal.style.display = "none";
             })
         };

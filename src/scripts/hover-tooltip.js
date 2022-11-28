@@ -2,6 +2,7 @@ const hoverTooltip = () => {
     const continents = document.getElementsByClassName("continents")[0];
     const countries = document.getElementsByClassName("countries");
     const na = document.querySelector(".na-countries");
+    console.log(countries)
 
     continents.addEventListener("mouseover", e => {
         const name = e.target.__data__.properties.name;
@@ -70,13 +71,20 @@ const hoverTooltip = () => {
             .then(data => {
                 console.log(data);
                 window.data = data;
-                document.getElementById("capital").innerHTML = data[0].capital[0];
+
+                let currencies = [];
+                for(const key in data[0].currencies){
+                    if (data[0].currencies.hasOwnProperty(key)){
+                        currencies.push(data[0].currencies[key].name);
+                    }
+                }
+                document.getElementById("capital").innerHTML = `Capital: ${data[0].capital[0]}`;
                 document.getElementById("flag").src = data[0].flags.svg;
-                document.getElementById("population").innerHTML = `Capital: ${data[0].population}`;
+                document.getElementById("population").innerHTML = `Population: ${data[0].population.toLocaleString("en-US")}`;
                 document.getElementById("languages").innerHTML = `Languages: ${Object.values(data[0].languages).join(", ")}`;
-                document.getElementById("currencies").innerHTML = `Currencies: ${_.pluck(Object.values(data[0].currencies)).join(", ")}`;
+                document.getElementById("currencies").innerHTML = `Currencies: ${currencies.join(", ")}`;
                 document.getElementById("continents").innerHTML = `Continent: ${data[0].continents[0]}`;
-                document.getElementById("area").innerHTML = `Area: ${data[0].area}`;
+                document.getElementById("area").innerHTML = `Area: ${Math.trunc(data[0].area*0.386102)}`;
 
             });
 

@@ -57,10 +57,10 @@ table {
 
 div.container {
   display: flex;
+  justify-content: center;
   margin-top: 110px;
   stroke: #646464;
   stroke-width: 1px;
-  padding-left: 10px;
 }
 
 path {
@@ -156,38 +156,6 @@ ul li {
   user-select: none;
 }
 
-.info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.innerbox {
-  width: 400px;
-  height: 400px;
-  background-color: #F5F5DC;
-  border-radius: 5px;
-  text-align: center;
-  border: solid blue 5px;
-}
-
-.name {
-  text-align: center;
-  font-size: 35px;
-  margin-bottom: 5px;
-}
-
-.stat {
-  font-size: 20px;
-}
-
-.continent-box {
-  display: none;
-}
-
 .footer {
   display: flex;
   justify-content: center;
@@ -212,6 +180,11 @@ ul li {
 .asia-map {
   display: flex;
   justify-content: center;
+}
+
+.svg-style {
+  display: block;
+  margin: auto;
 }
 
 .africa-container {

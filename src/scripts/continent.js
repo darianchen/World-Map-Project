@@ -10,56 +10,56 @@ const continent = () => {
     const continentMeasurements = [
         { 
         "name": "asia",
-        "width": width/2,
-        "height": height/1.4,
-        "transwidth": width - 1400,
-        "transheight": height-300,
-        "scale": 200
+        "width": 577,
+        "height": 610,
+        "transwidth": -100,
+        "transheight": 563,
+        "scale": 215
         },
         {
         "name": "africa",
-        "width": width/2,
-        "height": height/1.2,
-        "transwidth": width - 1200,
-        "transheight": height - 500,
-        "scale": 400
+        "width": 625,
+        "height": 583,
+        "transwidth": 192,
+        "transheight": 301,
+        "scale": 430
         },
         {
         "name": "europe",
-        "width": width/2,
-        "height": height/1.4,
-        "transwidth": width - 1240,
-        "transheight": height + 50,
-        "scale": 450
+        "width": 794,
+        "height": 589,
+        "transwidth": 220,
+        "transheight": 915,
+        "scale": 510
         },
         {
         "name": "oceania",
-        "width": width/2,
-        "height": height/1.4,
-        "transwidth": width - 2300,
-        "transheight": height - 700,
+        "width": 710,
+        "height": 582,
+        "transwidth": -860,
+        "transheight": 120,
         "scale": 500
         },
         {
         "name": "south-america",
-        "width": width/2,
-        "height": height/1.4,
-        "transwidth": width - 650,
-        "transheight": height - 710,
-        "scale": 400
+        "width": 351.3,
+        "height": 604,
+        "transwidth": 605,
+        "transheight": 94,
+        "scale": 430
         },
         {
         "name": "north-america",
-        "width": width/2,
-        "height": height/1.4,
-        "transwidth": width - 700,
-        "transheight": height-210,
-        "scale": 212
+        "width": 560,
+        "height": 553,
+        "transwidth": 600,
+        "transheight": 575,
+        "scale": 200
         }
     ]
 
     const svg = d3.select(`.${continentMeasurements[5].name}-map`).append('svg').attr('width', continentMeasurements[5].width).attr('height', continentMeasurements[5].height).attr('class', 'countries-svg');
-    const g = svg.append('g').attr("class", "na-countries").attr("id", continentMeasurements[5].name);
+    const g = svg.append('g').attr("class", "na-countries countries").attr("id", continentMeasurements[5].name);
     const projection = d3.geoMercator().scale(continentMeasurements[5].scale).translate([continentMeasurements[5].transwidth, continentMeasurements[5].transheight]);
     const path = d3.geoPath(projection);
 
