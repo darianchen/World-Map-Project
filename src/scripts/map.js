@@ -1,8 +1,6 @@
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
-import continent from "./continent";
 import hoverTooltip from "./hover-tooltip";
-import info from "./info";
 
 const map = () => {
     const height = 600;
