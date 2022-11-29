@@ -1,11 +1,7 @@
 import * as d3 from "d3";
 import * as topojson from "topojson-client";
-import worldMap from "./map";
 
 const continent = () => {
-
-    const width = window.innerWidth;
-    const height = window.innerHeight;
 
     const continentMeasurements = [
         { 
