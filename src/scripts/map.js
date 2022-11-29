@@ -59,21 +59,28 @@ const map = () => {
         for(let i = 0; i < closeBtns.length; i++){
             closeBtns[i].addEventListener("click", () => {
                 modal.style.display = "none";
+                clearData();
                 countryModal.style.display = "none";
             })
         };
 
         window.addEventListener("click", (e) => {
             if(e.target === modal) modal.style.display = "none"
+
+            if(e.target === countryModal) { 
+                countryModal.style.display = "none"
+                clearData();
+            }
         })
 
-        window.addEventListener("click", (e) => {
-            if(e.target === countryModal) countryModal.style.display = "none"
-        })
-
-
-
-        
+        const clearData = () => {
+            const dataTags = document.getElementsByClassName("data-tag")
+            for(let i = 0; i < dataTags.length; i++){
+                const child = dataTags[i].firstChild;
+                dataTags[i].innerHTML = "";
+                dataTags[i].appendChild(child);
+            }
+        }
 }
 
 export default map;
