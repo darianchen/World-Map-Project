@@ -7,6 +7,7 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
     display: none;
 }
 
@@ -63,4 +64,17 @@
 #country-name{
     display: flex;
     justify-content: center;
+    margin-top: 15px;
+}
+
+.country-modal-body{
+    margin-top: 30px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.data{
+    font-weight: bold;
 }
