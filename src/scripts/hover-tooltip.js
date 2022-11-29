@@ -2,7 +2,8 @@ const hoverTooltip = () => {
     const continents = document.getElementsByClassName("continents")[0];
     const countries = document.getElementsByClassName("countries");
     const na = document.querySelector(".na-countries");
-    console.log(countries)
+
+    window.countries = countries;
 
     continents.addEventListener("mouseover", e => {
         const name = e.target.__data__.properties.name;
@@ -61,7 +62,14 @@ const hoverTooltip = () => {
 
     for(let i = 0; i < countries.length; i++){ //This part is for the modal
         countries[i].addEventListener("click", e => {
-            const countryName = e.target.__data__.properties.name
+            let countryName = ""
+
+            if(countries[i].id === "north-america"){
+                countryName = e.target.__data__.properties.geounit;
+            }else{
+               countryName = e.target.__data__.properties.name
+            }
+ 
             const finalURL = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
             countryModal.style.display = "block";
             document.getElementById("country-name").innerHTML = countryName;
@@ -69,22 +77,19 @@ const hoverTooltip = () => {
             fetch(finalURL)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                window.data = data;
-
                 let currencies = [];
                 for(const key in data[0].currencies){
                     if (data[0].currencies.hasOwnProperty(key)){
                         currencies.push(data[0].currencies[key].name);
                     }
                 }
-                document.getElementById("capital").innerHTML = `Capital: ${data[0].capital[0]}`;
+                document.getElementById("capital").innerHTML += `${data[0].capital[0]}`;
                 document.getElementById("flag").src = data[0].flags.svg;
-                document.getElementById("population").innerHTML = `Population: ${data[0].population.toLocaleString("en-US")}`;
-                document.getElementById("languages").innerHTML = `Languages: ${Object.values(data[0].languages).join(", ")}`;
-                document.getElementById("currencies").innerHTML = `Currencies: ${currencies.join(", ")}`;
-                document.getElementById("continents").innerHTML = `Continent: ${data[0].continents[0]}`;
-                document.getElementById("area").innerHTML = `Area: ${Math.trunc(data[0].area*0.386102)}`;
+                document.getElementById("population").innerHTML += `${data[0].population.toLocaleString("en-US")}`;
+                document.getElementById("languages").innerHTML += `${Object.values(data[0].languages).join(", ")}`;
+                document.getElementById("currencies").innerHTML += `${currencies.join(", ")}`;
+                document.getElementById("continents").innerHTML += `${data[0].continents[0]}`;
+                document.getElementById("area").innerHTML += `${(Math.trunc(data[0].area*0.386102).toLocaleString("en-US"))} sq mi`;
 
             });
 
