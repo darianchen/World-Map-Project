@@ -3,12 +3,12 @@ import * as topojson from "topojson-client";
 import hoverTooltip from "./hover-tooltip";
 
 const map = () => {
-    const height = 600;
-    const width = 925;
+    const height = 655;
+    const width = 1010;
 
-    const svg = d3.select('.container').append('svg').lower().attr('width', width).attr('height', height);
+    const svg = d3.select('.container').append('svg').lower().attr('width', width).attr('height', height).attr("class", "world-map");
     const g = svg.append('g').attr("class", "continents");
-    const projection = d3.geoMercator().scale(150).translate([width/2.3, height/1.5]);
+    const projection = d3.geoMercator().scale(160).translate([505,465]);
     const path = d3.geoPath(projection);
     
     d3.json("data/world-continents.topo.json")
