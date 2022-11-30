@@ -58,9 +58,14 @@ table {
 div.container {
   display: flex;
   justify-content: center;
-  margin-top: 110px;
+  align-items: center;
   stroke: #646464;
   stroke-width: 1px;
+  height: 100%;
+}
+
+.world-map {
+  margin-top: 50;
 }
 
 path {
@@ -162,7 +167,7 @@ ul li {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;
+  height: 2rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -174,6 +179,7 @@ ul li {
 .asia-container {
   display: flex;
   flex-direction: column;
+  height: 100%;
   display: none;
 }
 
@@ -297,7 +303,7 @@ ul li {
 .modal-content {
   background-color: #f4f4f4;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin: 20% auto;
+  margin: 15% auto;
   padding: 20px;
   width: 30%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
