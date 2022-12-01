@@ -6,51 +6,51 @@ const continent = () => {
     const continentMeasurements = [
         { 
         "name": "asia",
-        "width": 577,
-        "height": 610,
+        "width": 605,
+        "height": 638,
         "transwidth": -100,
-        "transheight": 563,
-        "scale": 215
+        "transheight": 590,
+        "scale": 225
         },
         {
         "name": "africa",
-        "width": 625,
-        "height": 583,
-        "transwidth": 192,
-        "transheight": 301,
-        "scale": 430
+        "width": 675,
+        "height": 637,
+        "transwidth": 208,
+        "transheight": 330,
+        "scale": 465
         },
         {
         "name": "europe",
-        "width": 794,
-        "height": 589,
-        "transwidth": 220,
-        "transheight": 915,
-        "scale": 510
+        "width": 850,
+        "height": 630,
+        "transwidth": 232,
+        "transheight": 980,
+        "scale": 545
         },
         {
         "name": "oceania",
         "width": 710,
-        "height": 582,
+        "height": 626,
         "transwidth": -860,
-        "transheight": 120,
-        "scale": 500
+        "transheight": 160,
+        "scale": 540
         },
         {
         "name": "south-america",
-        "width": 351.3,
-        "height": 604,
-        "transwidth": 605,
-        "transheight": 94,
-        "scale": 430
+        "width": 365,
+        "height": 630,
+        "transwidth": 635,
+        "transheight": 100,
+        "scale": 450
         },
         {
         "name": "north-america",
-        "width": 560,
-        "height": 553,
-        "transwidth": 600,
-        "transheight": 575,
-        "scale": 200
+        "width": 644,
+        "height": 636,
+        "transwidth": 695,
+        "transheight": 665,
+        "scale": 232
         }
     ]
 
@@ -90,8 +90,5 @@ const continent = () => {
             })
         }
     }
-
-    
-
 
 export default continent;
