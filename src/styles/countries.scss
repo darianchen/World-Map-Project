@@ -5,74 +5,94 @@
 
 .asia-container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     display: none;
 }
 
 .asia-map{
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
-.svg-style{
-    display: block;
-    margin: auto;
-}
 
 .africa-container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     display: none;
 }
 
 .africa-map{
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .europe-container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     display: none;
 }
 
 .europe-map{
     display: flex;
-    justify-content: center;  
+    justify-content: center; 
+    margin-top: 100px; 
 }
 
 .oceania-container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     display: none;
 }
 
 .oceania-map{
     display: flex;
-    justify-content: center;  
+    justify-content: center;
+    margin-top: 100px;  
 }
 
 
 .north-america-container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     display: none;
 }
 
 .north-america-map{
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .south-america-container{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     display: none;
 }
 
 .south-america-map{
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .backBtn-box{
