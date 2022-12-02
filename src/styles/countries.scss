@@ -135,3 +135,33 @@
     font-size: 35px;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
+.europe:hover{
+    fill: #482ac0;
+    transition: .4s ease;
+}
+
+.oceania:hover{
+    fill: #8d1f52;
+    transition: .4s ease;
+}
+
+.africa:hover{
+    fill: #c85937;
+    transition: .4s ease;
+}
+
+.asia:hover{
+    fill: #b5a02d;;
+    transition: .4s ease;
+}
+
+.north:hover{
+    fill: #a81414;	
+    transition: .4s ease;
+}
+
+.south:hover{
+    fill: #187218;
+    transition: .4s ease;
+}
