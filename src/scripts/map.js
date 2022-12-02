@@ -65,9 +65,11 @@ const map = () => {
         };
 
         window.addEventListener("click", (e) => {
+            document.querySelector(".currency").innerHTML = "Currency: ";
             if(e.target === modal) modal.style.display = "none"
 
-            if(e.target === countryModal) { 
+            if(e.target === countryModal) {
+                document.querySelector(".currency").innerHTML = "Currencies: "; 
                 countryModal.style.display = "none"
                 clearData();
             }
