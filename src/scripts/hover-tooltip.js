@@ -3,8 +3,6 @@ const hoverTooltip = () => {
     const countries = document.getElementsByClassName("countries");
     const na = document.querySelector(".na-countries");
 
-    window.countries = countries;
-
     continents.addEventListener("mouseover", e => {
         const name = e.target.__data__.properties.name;
         const domEle = document.getElementById("tooltip");
@@ -35,12 +33,11 @@ const hoverTooltip = () => {
     }
 
     for(let i = 0; i < countries.length; i++){
-        countries[i].addEventListener("mouseleave", () => {
+        countries[i].addEventListener("mouseleave", (e) => {
             document.getElementById("tooltip").innerHTML = "";
             document.getElementById("tooltip").style.opacity = 0;
         })
     }
-
 
     na.addEventListener("mouseover", e => {
         const name = e.target.__data__.properties.geounit;
@@ -92,16 +89,8 @@ const hoverTooltip = () => {
                 document.getElementById("area").innerHTML += `${(Math.trunc(data[0].area*0.386102).toLocaleString("en-US"))} sq mi`;
 
             });
-
-
-            
-
-
         })
     }
-
-
-
 }
 
 export default hoverTooltip;
