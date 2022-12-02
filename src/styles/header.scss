@@ -10,30 +10,11 @@ nav{
     box-shadow: 0 0 10px 0px #88c38b;
 }
 
-
 .title{
     font-size: 50px;
     font-weight: bold;
     font-family:cursive;
 }
-
-// nav ul li {
-    // list-style: none;
-    // display: inline-block;
-    // width: 60px;
-//}
-
-// .creative{
-//     position: relative;
-//     top: -6px;
-//     display: flex;
-//     justify-content: center;
-// }
-
-// .test{
-//     vertical-align: middle;
-// }
-
 
 .nav-links{
     display: flex;
@@ -51,6 +32,7 @@ ul li {
     text-decoration: none;
     transition: all 0.25s;
     transform-origin: 50% 50%;
+    user-select: none;
 }
 
 #aboutBtn:hover{
@@ -64,5 +46,9 @@ ul li {
 .link{
     transition: all 0.25s;
     transform-origin: 50% 50%;
+    user-select: none;
+}
+
+.earth{
     user-select: none;
 }
