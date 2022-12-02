@@ -80,6 +80,9 @@ const hoverTooltip = () => {
                         currencies.push(data[0].currencies[key].name);
                     }
                 }
+
+                if(countryName === "Cuba") document.querySelector(".currency").innerHTML = "Currencies: ";
+                
                 document.getElementById("capital").innerHTML += `${data[0].capital[0]}`;
                 document.getElementById("flag").src = data[0].flags.svg;
                 document.getElementById("population").innerHTML += `${data[0].population.toLocaleString("en-US")}`;
