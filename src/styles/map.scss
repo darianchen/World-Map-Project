@@ -39,8 +39,34 @@ path {
     fill: #228B22;
 }
 
-path:hover{
-    transform: scale(1.01);
+path#europe.continent:hover{
+    fill: #482ac0;
+    transition: .4s ease;
+}
+
+path#oceania.continent:hover{
+    fill: #8d1f52;
+    transition: .4s ease;
+}
+
+path#africa.continent:hover{
+    fill: #c85937;
+    transition: .4s ease;
+}
+
+path#asia.continent:hover{
+    fill: #b5a02d;;
+    transition: .4s ease;
+}
+
+path#north-america.continent:hover{
+    fill: #a81414;	
+    transition: .4s ease;
+}
+
+path#south-america.continent:hover{
+    fill: #187218;
+    transition: .4s ease;
 }
 
 #tooltip {
