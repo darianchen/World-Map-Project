@@ -42,7 +42,7 @@ const height = 655;
 ```
 ## Technologies, Libraries, APIs
 - Webpack: A module bundler that bundles JavaScript files and stylesheets
-- D3: A JavaScript library 
+- D3: A JavaScript library that fetches and parses the JSON files 
 - REST Countries: A RESTful API that gets information about countries
 
 
