@@ -96,8 +96,34 @@ path {
   fill: #228B22;
 }
 
-path:hover {
-  transform: scale(1.01);
+path#europe.continent:hover {
+  fill: #482ac0;
+  transition: 0.4s ease;
+}
+
+path#oceania.continent:hover {
+  fill: #8d1f52;
+  transition: 0.4s ease;
+}
+
+path#africa.continent:hover {
+  fill: #c85937;
+  transition: 0.4s ease;
+}
+
+path#asia.continent:hover {
+  fill: #b5a02d;
+  transition: 0.4s ease;
+}
+
+path#north-america.continent:hover {
+  fill: #a81414;
+  transition: 0.4s ease;
+}
+
+path#south-america.continent:hover {
+  fill: #187218;
+  transition: 0.4s ease;
 }
 
 #tooltip {
@@ -145,6 +171,7 @@ ul li {
   text-decoration: none;
   transition: all 0.25s;
   transform-origin: 50% 50%;
+  user-select: none;
 }
 
 #aboutBtn:hover {
@@ -158,6 +185,10 @@ ul li {
 .link {
   transition: all 0.25s;
   transform-origin: 50% 50%;
+  user-select: none;
+}
+
+.earth {
   user-select: none;
 }
 
@@ -304,6 +335,36 @@ ul li {
   align-items: center;
   font-size: 35px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.europe:hover {
+  fill: #482ac0;
+  transition: 0.4s ease;
+}
+
+.oceania:hover {
+  fill: #8d1f52;
+  transition: 0.4s ease;
+}
+
+.africa:hover {
+  fill: #c85937;
+  transition: 0.4s ease;
+}
+
+.asia:hover {
+  fill: #b5a02d;
+  transition: 0.4s ease;
+}
+
+.north:hover {
+  fill: #a81414;
+  transition: 0.4s ease;
+}
+
+.south:hover {
+  fill: #187218;
+  transition: 0.4s ease;
 }
 
 .modal {
