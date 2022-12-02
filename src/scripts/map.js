@@ -5,7 +5,6 @@ import hoverTooltip from "./hover-tooltip";
 const map = () => {
     const height = 655;
     const width = 1010;
-
     const svg = d3.select('.container').append('svg').lower().attr('width', width).attr('height', height).attr("class", "world-map");
     const g = svg.append('g').attr("class", "continents");
     const projection = d3.geoMercator().scale(160).translate([505,465]);
@@ -17,16 +16,15 @@ const map = () => {
             g.selectAll(path).data(continents.features).enter().append('path').attr('d', path).attr('class', "continent");
         })
         .then(() => {
-            document.getElementsByTagName("path")[0].setAttribute("id", "europe");
-            document.getElementsByTagName("path")[1].setAttribute("id", "oceania");
-            document.getElementsByTagName("path")[2].setAttribute("id", "africa");
-            document.getElementsByTagName("path")[3].setAttribute("id", "asia");
-            document.getElementsByTagName("path")[4].setAttribute("id", "north-america");
-            document.getElementsByTagName("path")[5].setAttribute("id", "south-america");
-        })
-        .then(
-            hoverTooltip
-        )
+            const continentPaths = document.getElementsByTagName("path");
+            continentPaths[0].setAttribute("id", "europe");
+            continentPaths[1].setAttribute("id", "oceania");
+            continentPaths[2].setAttribute("id", "africa");
+            continentPaths[3].setAttribute("id", "asia");
+            continentPaths[4].setAttribute("id", "north-america");
+            continentPaths[5].setAttribute("id", "south-america");
+            hoverTooltip()
+        });
 
         const continents = document.getElementsByClassName("continents")[0];
 
