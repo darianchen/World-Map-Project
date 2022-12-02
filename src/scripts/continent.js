@@ -62,10 +62,8 @@ const continent = () => {
     d3.json("data/north-america.topo.json")
     .then(data => {
         const countries = topojson.feature(data, data.objects.continent_North_America_subunits);
-        g.selectAll(path).data(countries.features).enter().append('path').attr('class', 'country').attr('d', path);
-    }) 
-
-
+        g.selectAll(path).data(countries.features).enter().append('path').attr('class', 'country').attr('d', path).attr("class", "north");
+    });
 
     for(let i = 0; i < 5; i++){
         const svg = d3.select(`.${continentMeasurements[i].name}-map`).append('svg').attr('width', continentMeasurements[i].width).attr('height', continentMeasurements[i].height).attr('class', 'countries-svg');
@@ -77,8 +75,8 @@ const continent = () => {
         d3.json(continent)
         .then(data => {
             const countries = topojson.feature(data, data.objects.default);
-            g.selectAll(path).data(countries.features).enter().append('path').attr('class', 'country').attr('d', path);
-        })            
+            g.selectAll(path).data(countries.features).enter().append('path').attr('class', 'country').attr('d', path).attr("class", countries.features[0].properties.continent.toLowerCase());
+        })  
     };
 
     const backBtns = document.getElementsByClassName("backBtn-box");
@@ -89,6 +87,6 @@ const continent = () => {
             document.querySelector(".container").style.display = "flex";
             })
         }
-    }
+    };
 
 export default continent;
