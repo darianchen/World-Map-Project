@@ -135,6 +135,7 @@ path#south-america.continent:hover {
   border-radius: 10px;
   opacity: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  user-select: none;
 }
 
 nav {
@@ -395,6 +396,7 @@ ul li {
   color: #ccc;
   float: right;
   font-size: 30px;
+  user-select: none;
 }
 
 .closeBtn:hover, .closeBtn:focus {
