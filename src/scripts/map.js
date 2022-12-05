@@ -74,6 +74,8 @@ const map = () => {
         })
 
         const clearData = () => {
+            document.getElementById("flag").src = "#";
+
             const dataTags = document.getElementsByClassName("data-tag")
             for(let i = 0; i < dataTags.length; i++){
                 const child = dataTags[i].firstChild;
