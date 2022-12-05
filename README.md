@@ -50,3 +50,8 @@ I'm the Map is an interactive map that allows users to learn about the nearly 20
 - Fetch a random photo of each country using another API
 - Add Antarctica
 
+## Credits
+- https://github.com/topojson/world-atlas - World map
+- https://code.highcharts.com/mapdata/ - Maps of all the continents except North America
+- https://github.com/deldersveld/topojson/blob/master/continents/north-america.json - North America map
+
