@@ -102,8 +102,8 @@
     justify-content: space-between;
     align-items: center;
     position:absolute;
-    top:5;
-    left:5;
+    top:19;
+    left:19;
     margin-top: 100px;
     align-items: center;
     cursor: pointer;
@@ -111,13 +111,11 @@
 
 
 .fa{
+    height: 40px;
+    width: 45px;
     color: #383838;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
     padding: 3px 18px;
-}
-
-.fa-mail-reply{
-    font-size: 10px;
     background: linear-gradient(#07ffb0, #4caf50);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -125,17 +123,12 @@
     border-bottom-right-radius: 20px;
 }
 
-
-.continent-title{
-    margin-top: 100px;
+i.fa{
     display: flex;
     justify-content: center;
-    height: 50px;
     align-items: center;
     font-size: 35px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
-
 .europe:hover{
     fill: #482ac0;
     transition: .4s ease;
