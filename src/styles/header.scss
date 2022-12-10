@@ -6,8 +6,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #33b864;
-    box-shadow: 0 0 10px 0px #88c38b;
+    background-color: #44A7C4;
 }
 
 .title{
@@ -27,7 +26,7 @@ ul li {
 
 #aboutBtn{
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 15px;
+    font-weight: bold;
     cursor: pointer;
     text-decoration: none;
     transition: all 0.25s;
