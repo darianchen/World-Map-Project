@@ -83,7 +83,7 @@ const continent = () => {
 
     for(let i = 0; i < backBtns.length; i++){
         backBtns[i].addEventListener("click", () => {
-            backBtns[i].parentNode.parentNode.style.display = "none";
+            backBtns[i].parentNode.style.display = "none";
             document.querySelector(".container").style.display = "flex";
             })
         }
