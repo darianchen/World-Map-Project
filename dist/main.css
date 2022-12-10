@@ -146,8 +146,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #33b864;
-  box-shadow: 0 0 10px 0px #88c38b;
+  background-color: #44A7C4;
 }
 
 .title {
@@ -167,7 +166,7 @@ ul li {
 
 #aboutBtn {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.25s;
@@ -306,21 +305,19 @@ ul li {
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  top: 5;
-  left: 5;
+  top: 19;
+  left: 19;
   margin-top: 100px;
   align-items: center;
   cursor: pointer;
 }
 
 .fa {
+  height: 40px;
+  width: 45px;
   color: #383838;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25);
   padding: 3px 18px;
-}
-
-.fa-mail-reply {
-  font-size: 10px;
   background: linear-gradient(#07ffb0, #4caf50);
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -328,14 +325,11 @@ ul li {
   border-bottom-right-radius: 20px;
 }
 
-.continent-title {
-  margin-top: 100px;
+i.fa {
   display: flex;
   justify-content: center;
-  height: 50px;
   align-items: center;
   font-size: 35px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .europe:hover {
@@ -439,6 +433,7 @@ ul li {
 #flag {
   width: 45%;
   min-width: 7.5em;
+  border: solid black 1px;
 }
 
 #country-name {
@@ -457,6 +452,11 @@ ul li {
 
 .data {
   font-weight: bold;
+}
+
+.modal-list {
+  list-style: disc;
+  list-style-position: inside;
 }
 
 body {
