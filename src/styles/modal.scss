@@ -67,6 +67,7 @@
 #flag{
     width: 45%;
     min-width: 7.5em;
+    border: solid black 1px;
 }
 
 #country-name{
@@ -86,3 +87,8 @@
 .data{
     font-weight: bold;
 }
+
+.modal-list{
+    list-style: disc;
+    list-style-position: inside;
+  }
