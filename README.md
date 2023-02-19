@@ -16,7 +16,7 @@ I'm the Map is an interactive map that allows users to learn about the nearly 20
 
 ## Implementation
 - The world map is rendered using a TopoJSON file which gets converted into GeoJSON, and then the data is parsed by the D3 library. The same technique is used to generate all individual continent maps as well. 
-```
+```javascript
     const height = 655;
     const width = 1010;
     const svg = d3.select('.container').append('svg').lower().attr('width', width).attr('height', height).attr("class", "world-map");
