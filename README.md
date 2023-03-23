@@ -3,7 +3,7 @@
 Live link: https://darianchen.github.io/World-Map-Project/
 
 ## Background
-I'm the Map is an interactive map that allows users to learn about the nearly 200 countries in the world. Users can view information such as the flag, capital and population associated with each country.  
+I'm the Map is an interactive map with a straightforward interface that enables users to explore and learn more about the world by clicking on the different continents and then selecting particular countries. Users can obtain a variety of data including population, capital, country flag and more.
 
 ## Instructions
 - Select one of the 6 available continents on the world map.
